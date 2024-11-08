@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lettera del Professore - Novembre</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #d64f2d;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .letter {
+            background-color: #fff;
+            border: 2px solid #d64f2d;
+            padding: 20px;
+            width: 70%;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.3em;
+            color: #4e4e4e;
+            line-height: 1.8;
+            max-width: 900px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .button {
+            background-color: #d64f2d;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+        .button:hover {
+            background-color: #b03c24;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lettera del Professore - Novembre</h1>
+
+    <div class="letter" id="lettera">
+        <p>
+            Cari studenti della classe quinta, <br><br>
+            Scrivo queste righe con una sensazione di frustrazione che non avrei mai voluto provare. La lezione di oggi, quella su Git, era senza dubbio una delle più importanti dell'anno, una di quelle che vi avrebbero dato le basi per affrontare con sicurezza il futuro prossimo, sia per la maturità che per il mondo del lavoro. <br><br>
+            Ma non posso fare a meno di notare con delusione che meno della metà di voi si è presentata. Vi ricordo che la maturità non si prepara con la "stratagemma" dell'ultimo minuto. Il tempo per prepararsi sta finendo, e perdere occasioni come questa non fa che rendere il percorso più difficile. <br><br>
+            Non è più il momento di scherzare o di aspettare l'ultimo momento. Avete un anno di sfide davanti a voi, e la strada per la maturità richiede impegno, serietà e dedizione. Non potete permettervi di ignorare opportunità come quella di oggi. In futuro, ogni lezione persa sarà una lacuna che dovrete colmare. La maturità è un passo decisivo, non un gioco. <br><br>
+            Spero che questa lezione vi faccia riflettere sulla serietà di questo momento. Il vostro futuro dipende dalle scelte che fate ora. Non vorrei mai dover scrivere una lettera come questa per la seconda volta. <br><br>
+            Prof. [Nome del Professore]
+        </p>
+    </div>
+
+    <button class="button" onclick="aumentaTesto()">Aumenta la lamentela!</button>
+
+    <script>
+        function aumentaTesto() {
+            const lettera = document.getElementById('lettera');
+            let currentSize = window.getComputedStyle(lettera, null).getPropertyValue('font-size');
+            currentSize = parseFloat(currentSize);
+            lettera.style.fontSize = (currentSize + 5) + 'px';
+        }
+    </script>
+
+</body>
+</html>
